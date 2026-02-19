@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assests/img/favicon.png">
   <title>Primitivas Canvas 2D</title>
 
   <!-- Bootstrap 5 -->
@@ -20,7 +21,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning-subtle">
     <div class="container">
       <a class="navbar-brand fw-semibold" href="#">
-        Canvas 2D <span class="badge text-bg-warning text-dark ms-2">Primitivas</span>
+        Canvas 2D <span class="badge text-bg-warning text-dark ms-2">Trazado Avanzado</span>
       </a>
     </div>
   </nav>
@@ -34,7 +35,7 @@
         <div class="card shadow-sm h-100">
           <div class="card-body">
             <h5 class="card-title fw-bold">
-              Figuras básicas y Arcos
+              Primitivas, Curvas y Path2D
             </h5>
 
             <p class="card-text text-secondary">
@@ -46,11 +47,16 @@
               <li><code>clearRect()</code></li>
               <li><code>strokeRect()</code></li>
               <li><code>beginPath()</code> + <code>lineTo()</code></li>
-              <li><code>arc()</code> → círculos y curvas</li>
+              <li><code>arc()</code></li>
+              <li><code>quadraticCurveTo()</code></li>
+              <li><code>bezierCurveTo()</code></li>
+              <li><code>Path2D()</code></li>
+              <li><code>arcTo()</code> (rectángulos redondeados)</li>
             </ul>
 
             <div class="alert alert-warning mb-0 small">
-              Se combinan primitivas geométricas y trazado de arcos.
+              Se combinan primitivas geométricas, curvas cuadráticas,
+              curvas cúbicas y trazado avanzado con Path2D.
             </div>
           </div>
         </div>
@@ -60,7 +66,7 @@
       <div class="col-12 col-lg-8">
         <div class="card shadow-sm h-100">
           <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="fw-semibold">Renderizado en Canvas</span>
+            <span class="fw-semibold">Renderizado dinámico en Canvas</span>
             <button id="btnRedraw" class="btn btn-sm btn-dark">
               Redibujar
             </button>
@@ -71,7 +77,7 @@
           </div>
 
           <div class="card-footer text-secondary small">
-            Rectángulos + Triángulo + Figura con arc().
+            Rectángulos, triángulos, arcos, curvas Bézier, Path2D y figuras compuestas.
           </div>
         </div>
       </div>
@@ -86,7 +92,7 @@
         Programador: <span class="fw-semibold">Daniel Alonso</span>
       </div>
       <div class="small text-secondary">
-        © <span id="year"></span> | Canvas + Bootstrap 5
+        © <span id="year"></span> | Canvas 2D + Bootstrap 5
       </div>
     </div>
   </footer>
